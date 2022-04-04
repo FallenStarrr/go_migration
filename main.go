@@ -58,7 +58,7 @@ func main() {
 
 
 	}
-        query = strings.Replace(query, "\"\"", "''", -1)
+        query = strings.Replace(query, "\"", "'", -1)
 	fmt.Println(query)
 	sql_migration.WriteString(query)
 
