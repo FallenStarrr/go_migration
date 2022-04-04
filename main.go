@@ -6,6 +6,7 @@ import (
 	"github.com/google/uuid"
 	"io/ioutil"
 	"os"
+	"strings"
 )
 
 func check(e error) {
@@ -57,7 +58,7 @@ func main() {
 
 
 	}
-
+        query = strings.Replace(query, "\"\"", "''", -1)
 	fmt.Println(query)
 	sql_migration.WriteString(query)
 
